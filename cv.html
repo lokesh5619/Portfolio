@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: hsl(0, 0%, 100%);
+        }
+        .cv-content{
+            /* border: 1px solid white; */
+            background-color: rgb(255, 255, 255);
+            box-shadow: 2px 2px 15px 0 rgb(0,0,0,0.5);
+            border-radius: 10px;
+            height: auto;
+            width: 600px;
+            margin-top: 40px;
+        }
+        h1{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 40px;
+            /* margin-top: 20px; */
+        }
+        h5{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+        .link-web{
+            margin-top: 10px;
+            /* border: 1px solid black; */
+            /* text-align: center; */
+            display: flex;
+            justify-content: center;
+            gap:20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+        h2{
+            font-family: sans-serif;
+            font-size: 15px;
+            margin:20px 15px 5px;
+        }
+        P{
+            font-family: sans-serif;
+            font-size: 15px;
+            margin: 10px 15px;
+        }
+        h4{
+            font-size: 15px;
+            font-family: sans-serif;
+            margin: 10px 15px;
+        }
+        button{
+            background: transparent;
+            padding: 5px;
+            margin-left: 80vh;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s ease-in;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(225, 226, 226);
+            transition-duration: 0.1s ease-out;
+        }
+        /* hr{
+            padding: 15px;
+        } */
+    </style>
+</head>
+<body>
+    <section class="cv">
+    <div class="cv-content" id="cv">
+        <h1>Resume</h1>
+        <h5>lokeshvishwakarma5755@gmail.com</h5>
+        <div class="link-web">
+            <a href="https://www.linkedin.com/in/lokesh-vishwakarma-9691022ba"><i class="fa-brands fa-linkedin"></i><span> LokeshVishwakarmaLinkedinProfile</span></a>
+            <a href=""><i class="fa-brands fa-github"></i><span> LokeshVishwakarmaGitHubProfile</span></a>
+        </div><br><hr>
+        <h2>CAREER OBJECTIVE</h2>
+        <p>To achieve a full stack developer position where I can utilize my skill infont-end
+            and back-end technologies to build scalable and efficient web application.
+        </p>
+        <h2>EDUCATION</h2>
+        <p><b>Bachelor ot Tchnology in Computer Science 2022-2026</b><br>
+        Malwa Institute of Technology, Indore.</p>
+        <p><b>12th (MP Board)- (66%)</b><br>
+        Sarswati Shishu Vidhya Mandir School, Timarni</p>
+        <p><b>10th (MP Board)- (75%)</b><br>
+        Arunoday Vidhya Mandir School, Timarni</p>
+
+        <h2>SKILLS</h2>
+        <p><b>Technical Skills: </b>Core Java, Advance Java, C, C++, HTML,CSS,SQL</p>
+        <p><b>Soft Skills: </b>Problem-solving,Communication,Teamwork</p>
+
+        <h2>WORK EXPERIENCE1</h2>
+        <h4>Full Stack Developer</h4>
+        <p>• Developed responsive web application using the MERN stack</p>
+        <p>• Designed and implemented RESTfull APIs</p>
+        <p>• Collaborated with cross-functional teams to define and implement new features</p>
+
+        <h2>PROJECTS</h2>
+        <h4>Personal Portfolio Website</h4>
+        <p>• Developed a personal portfolio website using HTML, CSS and JavaScript</p>
+        <p>• Implemented responsive design and interactive features</p>
+
+        <h2>E-commerce Website</h2>
+        <p>• Built an e-commerce website a responsive design</p>
+        <p>• Integrated payment gateway for processing transactions</p>
+        <button id="download">Download</button>
+    </div>
+    </section>
+
+    <script>
+document.getElementById("download").addEventListener("click", () => {
+  const { jsPDF } = window.jspdf;
+  const cv = document.getElementById("cv");
+
+  html2canvas(cv, { scale: 2 }).then(canvas => {
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF("p", "mm", "a4");
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+
+    const imgWidth = pdfWidth;
+    const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    // First page
+    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+    heightLeft -= pdfHeight;
+
+    // If content is longer than one page
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+      heightLeft -= pdfHeight;
+    }
+
+    pdf.save("My_CV.pdf");
+  });
+});
+</script>
+</body>
+</html

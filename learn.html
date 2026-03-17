@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="learn.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="main-content">
+        <div class="nav-bar hidden" id="navbar">
+            <ul>
+                <li>
+                    <a href="#home" class="item">
+                        <span class="item-icn">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="item">
+                        <span class="item-icn">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="item">
+                        <span class="item-icn">Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#project" class="item">
+                        <span class="item-icn">Project</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="item">
+                        <span class="item-icn">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main-page -->
+         <section id="home">
+            <div class="main-page">
+                <div class="main-page-name">
+                     <h6>WE DESIGN & BUILD BRANDS</h6>
+                        <h1>HI,I am<span class="my-name"> Lokesh Vishwakarma</span><br>I build responsive & modern<br>websites. </h1>
+                            <div class="btn">
+                                <button id="set">Hire me</button>
+                                <button><a href="cv.html" class="item">Download cv</a></button>
+                             </div>
+                             </div>
+                <div class="img-source"></div>
+            </div>
+        </section>
+
+        <!-- About me -->
+        <section id="about">
+            <div class="about-me">
+                <div class="about-image"></div>
+                    <div class="about-text">
+                        <h5>MY INTRODUCATION</h5>
+                        <h2>About Me</h2>
+                        <p class="information">I'm Lokesh Vishwakarma, Java developer from Indore. I enjoy building responsive and 
+                         user-friendly website. Skilled in HTML,CSS and JavaScript with hands-on project experience.
+                         Created a fashion e-commerce site and personal portfolio. I'm passionate about clean UI and
+                         mobile-first design.Looking to grow in a tech-driven team and learn more every day.
+                        </p>
+                        <p class="bio-information"><b>Name:</b> Lokesh Vishwakarma<br><br><b>Date of Birth:</b> October 28,2004
+                         <br><br><b>Address:</b> Nanda nagar 10,Indore<br><br><b>Email:</b> lokeshvishwakarma5755@gmail.com<br><br>
+                         <b>Phone:</b> 6263659258
+                        </p>
+                        <div class="btn">
+                            <button class="about-btn" onclick="openModal('music.html')"><i class="fa-solid fa-music"></i> Music</button>
+                            <button class="about-btn" onclick="openModal('Travel.html')"><i class="fa-solid fa-plane"></i> Travel</button>
+                            <button class="about-btn" onclick="openModal('Movie.html')"><i class="fa-solid fa-clapperboard"></i> Movie</button>
+                            <button class="about-btn" onclick="openModal('Sport.html')"><i class="fa-solid fa-baseball"></i> Sports</button>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="skill-page">
+                <div class="skill-name"><h1>My Skills</h1>
+                </div>
+                    <div class="my-skill-content">
+                        <div class="my-skill"> <i class="fa-brands fa-html5"></i>
+                        <span>HTML</span></div>
+                        <div class="my-skill C"><i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS</span></div>
+                        <div class="my-skill java"><i class="fa-brands fa-java"></i>
+                        <span>Java</span></div>
+                        <div class="my-skill C"><i class="fa-solid fa-c"></i>
+                        <span>C/C++</span></div>
+                    </div>
+            </div>
+        </section>
+        <section id="project">
+            <div class="project-div">
+                <div class="project-name"><h1>Project</h1></div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contact-div">
+                <div class="contact-name"><h1>Get In Touch</h1></div>
+                <div class="text-contact">
+                    <input onclick="" placeholder="Your Name"><br>
+                    <input type="email" placeholder="Your Email"><br>
+                    <input type="text-area" placeholder="Your Message">
+                    <div class="contact-btn"><button class="button-change">Send Meassage</button></div>
+                </div>
+            </div>
+            <div class="last-content">
+                <div class="last-name"><h1>LOKESH</h1>
+                <p class="parag">💻 "I'm Lokesh Vishwakarma — A Java developer who brings logic to life and data to action."</p></div>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+</html>

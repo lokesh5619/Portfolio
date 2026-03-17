@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding:0;
+}
+html {
+    scroll-behavior: smooth;  /* click karne pe smooth scroll hoga */
+}
+section {
+  scroll-margin-top: 60px; /* navbar ki height ke barabar */
+}
+.about-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid gray;
+  background: white;
+  text-decoration: none;  /* underline hata dega */
+  color: black;
+}
+.about-btn:hover {
+  background: #eee;
+  
+}
+
+body{
+    display: flex;
+    align-items: center;
+    
+    /* justify-content: center; */
+    background-color:rgb(99, 98, 98);
+}
+.main-content{
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+}
+.nav-bar{
+    width: 100%;
+    height:60px;
+    background-color: #ffffff;
+    padding:20px;
+    box-sizing:border-box;
+    color:#4b3e3e;
+    /* overflow: hidden; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0;
+    border-right: none;
+    border: 1px solid lightgrey;
+    transition: top .3s ease;
+    z-index: 1000;
+}
+/* .nav-bar:hover{
+    height:150px;
+} */
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2.5rem;
+    /* border: 1px solid black; */
+}
+li{
+    /* border-radius: 1px; */
+    cursor: pointer;
+     /* border: 1px solid lightgrey; */
+     /* border-radius: 5px; */
+     /* padding:5px 5px; */
+    transition: border-bottom 0.3s ease;
+}
+li:hover{
+    /* background-color: #ff2600; */
+    border-bottom: 0.1rem solid #4b3e3e;
+}
+
+.item{
+    display: inline-flex;
+    color:inherit;
+    text-decoration: none;
+}
+.item-icn{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.name{
+    display: flex;
+    justify-content:center;
+}
+
+/* main page */
+.main-page{
+    /* border: 1px solid red; */
+    height:610px;
+    background-image: url(portfolio.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+    /* flex-direction: row; */
+}
+
+.main-page-name{
+    /* border:1px solid black; */
+    height:300px;
+    width:auto;
+    margin-top:100px; 
+}
+h6{
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-top: 50px;
+    color:rgb(157, 163, 124);
+}
+h1{
+    font-family: sans-serif;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.my-name{
+    color:rgb(157, 163,124);
+}
+button{
+    padding: 10px 10px;
+    border: 1px solid rgb(157, 163,124);
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(143, 148, 112);
+}
+button:hover{
+    transition: 0.3s ease-out;
+    color:#fff;
+    background-color:rgb(157, 163,124) ;
+}
+
+/* main page photo */
+.img-source{
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 3px 3px 20px -2px rgb(0,0,0,0.5);
+    background-image:url(Lokesh\ Vishwakarma.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:400px;
+    height:400px;
+    border-radius: 50% ;
+    margin-top:100px;
+}
+
+/* About me */
+.about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    gap:50px;
+    padding: 20px;
+    background-color: rgb(247, 247, 247);
+}
+/* .about-image{
+    border: 1px solid lightgray;
+    background-image:url(lokesh3.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 8px 2px rgb(0,0,0,0.5);
+    height: 400px;
+    width: 250px;
+    border-radius: 10px;
+} */
+.about-text{
+    /* border: 1px solid black; */
+    height: 400px;
+    width:650px;
+}
+h5{
+    font-family: sans-serif;
+    font-size: 12px;
+
+}
+h2{
+    font-family: sans-serif;
+    margin-top:20px;
+}
+.information{
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-top:20px;
+    color: rgb(130, 134, 105);
+}
+.bio-information{
+    margin-top:20px ;
+    font-family:sans-serif;
+}
+.btn{
+    display: flex;
+    gap: 20px;
+}
+.about-btn{
+    color:rgb(148, 141, 104);
+    width: 100px;
+    margin-top: 30px;
+    border-radius: 25px;
+     transition: 0.3s ease-in;
+}
+.about-btn:hover{
+    transition: 0.3s ease-out;
+    color:#fff;
+    background-color:rgb(157, 163,124) ;
+}
+
+
+
+/* Skill page */
+.skill-page{
+    height: 350px;
+    /* display: flex;
+    justify-content: center; */
+    /* border: 1px solid black; */
+    background-color:hwb(0 100% 0%);
+    padding: 10px;
+}
+.skill-name{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-skill-content{
+    /* border: 1px solid black; */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    height: 150px;
+}
+.my-skill{
+    /* display: flex; */
+    text-align: center;
+    border:none;
+    height: 140px;
+    width: 100px;
+    box-shadow: 2px 2px 10px 1px rgb(0,0,0,0.5);
+    border-radius: 10px;
+    
+}
+.my-skill i {
+    margin: 20px 30px;
+    font-size: 50px;
+    color: red;
+} 
+
+/* yaha hamne icon ka color diya */
+.C i{
+    color:blue;
+}
+.java i{
+    color:rgb(95, 93, 216)
+}
+.my-skill span{
+    font-family: Arial, sans-serif;
+    font-size:18px;
+    font-weight: bold;
+   
+}
+
+
+/* Project page */
+.project-div{
+    height: 450px;
+    background-color: #f5f5f5;
+}
+.project-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* contact-div */
+.contact-div{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 500px;
+    /* border: 1px solid black; */
+    padding: 10px;
+    background-color: #e9e7e7;
+}
+.contact-name{
+    color:#000000;
+    justify-content: center;
+    background:transparent;
+}
+h3{
+    font-family: sans-serif;
+}
+.text-contact{
+    border-radius: 10px;
+    height: 280px;
+    width: 500px;
+    margin-top: 50px;
+    padding: 20px;
+    background: transparent;
+    box-shadow: 2px 3px 10px 2px rgb(0,0,0,0.5);
+
+}
+input{
+    width: 470px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 0 10px;
+    font-size: 15px;
+    border: none;
+}
+.contact-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.button-change{
+    border-radius: 5px;
+    background-color: #000000;
+    color: #a3a3a3
+}
+.last-content{
+    
+    height: 120px;
+    padding: 10px;
+    background-color: black;
+
+}
+.last-name{
+   
+    text-align: center;
+    color: white;
+}
+.parag{
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: medium;
+}
+
+/* Modal background */
+.modal {
+  display: none;    
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
