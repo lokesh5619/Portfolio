@@ -3,9 +3,6 @@
 ## Description
 This is a simple personal portfolio website created using HTML and CSS. It showcases basic layout design and responsive UI.
 
-## Preview
-(screenshot)
-
 ## Tech Stack
 HTML, CSS
 
